@@ -1,13 +1,14 @@
 import { Title } from 'components';
-import { Component } from 'react';
+import PropTypes from 'prop-types'
 
-export class Notification extends Component {
-  render() {
-    const { title } = this.props;
+export const Notification = ({ title }) => {
     return (
       <>
         <Title>{title}</Title>
       </>
     );
   }
+
+Notification.propTypes = {
+  title: PropTypes.string,
 }

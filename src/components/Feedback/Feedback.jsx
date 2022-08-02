@@ -46,11 +46,11 @@ export class Feedback extends Component {
             options={options}
             onLeaveFeedback={this.handleGood}
             onClear={this.onClearBtn}
-          ></FeedbackOptions>
+          />
         </Section>
         <Section title="Statistic">
           {totalFeedbacks === 0 ? (
-            <Notification title="There is no feedback"></Notification>
+            <Notification title="There is no feedback"/>
           ) : (
             <Statistic
               good={good}
@@ -58,7 +58,7 @@ export class Feedback extends Component {
               bad={bad}
               total={totalFeedbacks}
               positivePercentage={positiveFeedbacks}
-            ></Statistic>
+            />
           )}
         </Section>
       </>

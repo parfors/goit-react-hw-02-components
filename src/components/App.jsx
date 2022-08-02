@@ -1,5 +1,5 @@
 import { Feedback } from 'components';
 
 export const App = () => {
-  return <Feedback></Feedback>;
+  return <Feedback/>;
 };

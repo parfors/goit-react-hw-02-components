@@ -1,9 +1,7 @@
-import { Component } from 'react';
 import { Button, ButtonWrap } from 'components/Feedback/Feedback.syled';
+import PropTypes from 'prop-types'
 
-export class FeedbackOptions extends Component {
-  render() {
-    const { options, onLeaveFeedback, onClear } = this.props;
+export const FeedbackOptions = ({ options, onLeaveFeedback, onClear }) => {
     return (
       <>
         <ButtonWrap>
@@ -17,4 +15,9 @@ export class FeedbackOptions extends Component {
       </>
     );
   }
-}
+
+FeedbackOptions.propTypes = {
+  options: PropTypes.array.isRequired,
+  onLeaveFeedback: PropTypes.func,
+  onClear: PropTypes.func,
+  }
